@@ -47,9 +47,9 @@ const getLargestPalindrom = (numberOfDigits) => {
 // Watches for submission, starts a timer, does calculation and then renders the result to DOM
 document.querySelector('#digit-number-form').addEventListener('submit', (e) => {
     e.preventDefault();
+    palindrom = 0;
     startTime = Date.now();
-    const digitNumberInput = e.target.digitNo.value
-    palindrom = getLargestPalindrom(digitNumberInput)
+    palindrom = getLargestPalindrom(e.target.digitNo.value)
     renderToDOM()
 });
 
